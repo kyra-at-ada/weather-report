@@ -46,7 +46,7 @@ const getWeather = () => {
       console.log("weather", weather)
       console.log("Weather current", weather.current)
       console.log("Weather.current.temp", weather.current.temp)
-      state.temp = Math.round(convertKtoF(weather.current.temp));
+      state.temp = Math.round(convertKtoF(weather.main.temp));
       formatTempAndGarden();
     })
     .catch((error) => {
