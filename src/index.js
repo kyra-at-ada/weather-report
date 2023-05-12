@@ -22,6 +22,7 @@ const findLatAndLong = () => {
       },
     })
     .then((response) => {
+      console.log("find Lat and Lon")
       console.log(response.data);
       state.lat = response.data[0].lat;
       state.long = response.data[0].lon;
@@ -42,7 +43,7 @@ const getWeather = () => {
     })
     .then((response) => {
       const weather = response.data;
-
+      console.log("weather", str(weather))
       console.log("Weather current", weather.current)
       console.log("Weather.current.temp", weather.current.temp)
       state.temp = Math.round(convertKtoF(weather.current.temp));
